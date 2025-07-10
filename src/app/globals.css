@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #4b536aff;
+  --mainText: #111111;
+  --subText: #11111180;
+  --borderColor: #eeeeee;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primaryColor: var(--background);
+  --color-PrimaryText: var(--mainText);
+  --color-SecondaryText: var(--subText);
+  --color-borderColor: var(--borderColor);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer utilities {
+  .box {
+    @apply px-4 w-full mx-0 lg:px-0 md:mx-auto md:w-[700px] lg:w-[60rem] xl:w-[1000px];
+  }
+  .inputStyle {
+    @apply p-4 bg-[#F5F5F5] border  rounded-[10px] placeholder:text-SecondaryText text-sm font-medium outline-none w-full;
+  }
+  /* .cursor-pointer {
+  } */
+
+  /* dark mode based on system */
+  /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+  body {
+    background: white;
+    color: var(--mainText);
+    font-family: var(--font-sans);
+  }
+
+  .slick-track {
+    display: flex !important;
+    gap: 10px !important;
+  }
+
+  /* .slick-prev,
+.slick-next {
+  z-index: 10;
+  display: block !important;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.slick-prev::before,
+.slick-next::before {
+  color: black !important;
+  font-size: 24px;
+} */
 }
