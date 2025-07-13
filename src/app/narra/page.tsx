@@ -575,11 +575,11 @@ const page = () => {
           <ul className="list-disc font-normal text-base">
             <li>
               <p>Homepage</p>
-              <Image
-                src={"/images/n8.png"}
+              <img
+                src={
+                  "https://framerusercontent.com/images/fGkcyDdKsPCW647Izg4R8tXWYo.gif"
+                }
                 alt="..."
-                height={1000}
-                width={1000}
                 className="w-full mt-10"
               />
             </li>
@@ -616,11 +616,11 @@ const page = () => {
 
             <li className="mt-10">
               <p>Uploading Video</p>
-              <Image
-                src={"/images/n12.png"}
+              <img
+                src={
+                  "https://framerusercontent.com/images/GyHaT0klIZqlJr6skC0MyEPeQo.gif"
+                }
                 alt="..."
-                height={1000}
-                width={1000}
                 className="w-full mt-10"
               />
             </li>
@@ -629,42 +629,42 @@ const page = () => {
             <p className="font-medium text-[17px] ">Linking Video</p>
             <li className="">
               <p>Single</p>
-              <Image
-                src={"/images/n13.png"}
+              <img
+                src={
+                  "https://framerusercontent.com/images/a0qtWrCjuwJ8HvUV5X8emk7P1BI.gif"
+                }
                 alt="..."
-                height={1000}
-                width={1000}
                 className="w-full mt-10"
               />
             </li>
             <li className="mt-10">
               <p>Multiple</p>
-              <Image
-                src={"/images/n14.png"}
+              <img
+                src={
+                  "https://framerusercontent.com/images/OomGEf5LiRS3THuHUcGMFZubZw.gif"
+                }
                 alt="..."
-                height={1000}
-                width={1000}
                 className="w-full mt-10"
               />
             </li>
           </ul>
           <div className="mt-10">
             <p className="font-medium text-[17px] ">Creating Movie</p>
-            <Image
-              src={"/images/n15.png"}
+            <img
+              src={
+                "https://framerusercontent.com/images/S3YJzp5VQ1C3gOcqiaysmylpko.gif"
+              }
               alt="..."
-              height={1000}
-              width={1000}
               className="w-full mt-10"
             />
           </div>
           <div className="mt-10">
             <p className="font-medium text-[17px] ">Creating TV Series</p>
-            <Image
-              src={"/images/n16.png"}
+            <img
+              src={
+                "https://framerusercontent.com/images/7Ph34BWqCfIFeqzHd8UR85ynuWs.gif"
+              }
               alt="..."
-              height={1000}
-              width={1000}
               className="w-full mt-10"
             />
           </div>
@@ -680,11 +680,11 @@ const page = () => {
           </div>
           <div className="mt-10">
             <p className="font-medium text-[17px] ">Publisher's Flow </p>
-            <Image
-              src={"/images/n18.png"}
+            <img
+              src={
+                "https://framerusercontent.com/images/BqPks9jS8bpNVTgMEysi6APjKk.gif"
+              }
               alt="..."
-              height={1000}
-              width={1000}
               className="w-full mt-10"
             />
           </div>
