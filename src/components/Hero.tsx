@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ArrowIon from "./icons/ArrowIon";
 
 const Hero = () => {
@@ -17,10 +17,11 @@ const Hero = () => {
       });
     }
   };
+
   return (
     <section id="About" className=" border-b border-borderColor">
       <div className="box">
-        <div className="py-[60px] flex flex-col lg:flex-row gap-10 lg:gap-0 items-start justify-between w-full ">
+        <div className="py-[40px] flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between w-full ">
           <div className="max-w-[480px] flex flex-col gap-[10px]">
             <p className="text-PrimaryText font-medium text-sm">
               Hello there! 👋
@@ -62,7 +63,7 @@ const Hero = () => {
               alt="hero-img"
               height={1000}
               width={1000}
-              className="object-contain w-[392px] h-[416px]"
+              className="object-contain w-[400px] h-[400px]"
             />
           </div>
         </div>

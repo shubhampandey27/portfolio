@@ -64,7 +64,7 @@ const GetInTouch = () => {
   return (
     <section id="Contact" className="py-[70px] relative">
       <div className="box">
-        <div className="flex flex-col md:flex-row items-start gap-[39px] relative">
+        <div className="flex flex-col md:flex-row items-center gap-[39px] relative">
           <Image
             src={"/images/contact-img.png"}
             alt="hero-img"

@@ -5,10 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 const MyWorks = () => {
-  const ref = useRef<HTMLElement | null>(null);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const sectionRef = useRef<HTMLElement | null>(null);
   const [isHoveringItem, setIsHoveringItem] = useState<boolean>(false);
   const router = useRouter();
+
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [show, setShow] = useState(false);
 
   const data = [
     {
@@ -35,22 +37,46 @@ const MyWorks = () => {
       route: "project-managment-system",
     },
   ];
-
-  // Track mouse
   useEffect(() => {
+    console.log("sdfds");
     const handleMouseMove = (e: MouseEvent) => {
       setCursorPos({ x: e.clientX, y: e.clientY });
+      console.log("sdfds", e.clientX, e.clientY);
     };
-    if (ref.current) {
+    if (sectionRef.current) {
       window.addEventListener("mousemove", handleMouseMove);
     }
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // IntersectionObserver logic
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Update visibility every time intersection changes
+          setShow(entry.isIntersecting);
+          console.log(entry.isIntersecting, "dfsdsf");
+        });
+      },
+      {
+        root: null, // viewport
+        threshold: 0.3, // lower = more sensitive
+      }
+    );
+
+    const el = sectionRef.current;
+    if (el) observer.observe(el);
+
+    return () => {
+      if (el) observer.unobserve(el);
+    };
+  }, [setShow]);
+
   return (
     <section
       id="Work"
-      ref={ref}
+      ref={sectionRef}
       className="border-b border-borderColor py-[100px] relative cursor-none"
     >
       <div className="box">
@@ -91,45 +117,47 @@ const MyWorks = () => {
         </div>
       </div>
 
-      <motion.div
-        animate={{
-          x: cursorPos.x + 20,
-          y: cursorPos.y + 20,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100, // lower = more delay
-          damping: 20, // higher = less bounce
-          mass: 0.5,
-        }}
-        className="fixed top-0 left-0 z-[9999] pointer-events-none "
-      >
-        <div className="relative hidden lg:block">
-          <AnimatePresence mode="wait">
-            {isHoveringItem ? (
-              <motion.div
-                key="hover"
-                initial={{ opacity: 0, scale: 0.7 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.7 }}
-                transition={{ duration: 0.2 }}
-                className="bg-white px-4 py-2 rounded-[10px] text-sm font-medium "
-              >
-                View Project
-              </motion.div>
-            ) : (
-              <motion.div
-                key="default"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 0.5, scale: 0.9 }}
-                exit={{ opacity: 0, scale: 0.5 }}
-                transition={{ duration: 0.2 }}
-                className="w-3 h-3 bg-SecondaryText rounded-full"
-              />
-            )}
-          </AnimatePresence>
-        </div>
-      </motion.div>
+      {show && (
+        <motion.div
+          animate={{
+            x: cursorPos.x + 20,
+            y: cursorPos.y + 20,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            mass: 0.5,
+          }}
+          className="fixed top-0 left-0 z-[9999] pointer-events-none"
+        >
+          <div className="relative hidden lg:block">
+            <AnimatePresence mode="wait">
+              {isHoveringItem ? (
+                <motion.div
+                  key="hover"
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.7 }}
+                  transition={{ duration: 0.2 }}
+                  className="bg-white px-4 py-2 rounded-[10px] text-sm font-medium"
+                >
+                  View Project
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="default"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 0.5, scale: 0.9 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-3 h-3 bg-SecondaryText rounded-full"
+                />
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };

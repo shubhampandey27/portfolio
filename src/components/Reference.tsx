@@ -127,14 +127,17 @@ const Reference = () => {
     slidesToScroll: isMobile ? 1 : 2,
     variableWidth: false,
     adaptiveHeight: false,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 6000,
     pauseOnHover: false,
     arrows: false,
   };
   return (
-    <section id="References" className="py-[100px] bg-[#FCFCFC]">
-      <div className="box">
+    <section
+      id="References"
+      className="py-[100px] bg-[#FCFCFC] border-b border-borderColor"
+    >
+      <div className="box1">
         <div className="mb-10 text-center">
           <p className="text-[36px] font-medium">References</p>
         </div>

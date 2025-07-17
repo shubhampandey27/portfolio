@@ -106,12 +106,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
+      {/* <link rel="icon" href={header.favicon} type="image/png" /> */}
       <body className={inter.variable}>
-        <LenisProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </LenisProvider>
+        {/* <LenisProvider> */}
+        <Navbar />
+        {children}
+        <Footer />
+        {/* </LenisProvider> */}
       </body>
     </html>
   );

@@ -114,10 +114,10 @@ const Navbar = () => {
                       y: 0,
                       rotate: [20, -7],
                       transition: {
-                        duration: 0.4,
+                        duration: 0.3,
                         ease: "easeOut",
                         rotate: {
-                          duration: 0.4,
+                          duration: 0.3,
                           ease: "easeOut",
                         },
                       },
@@ -127,7 +127,7 @@ const Navbar = () => {
                       y: -20,
                       rotate: 20,
                       transition: {
-                        duration: 0.4,
+                        duration: 0.3,
                         ease: "easeIn",
                       },
                     }}
