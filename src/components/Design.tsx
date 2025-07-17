@@ -74,7 +74,7 @@ const Design = () => {
                   y: expanded === i ? 0 : 40,
                 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className={`${
+                className={`object-contain ${
                   expanded === i ? "block" : "hidden"
                 } w-full h-[374px] rounded-[10px]`}
               />
