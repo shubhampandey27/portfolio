@@ -38,10 +38,8 @@ const MyWorks = () => {
     },
   ];
   useEffect(() => {
-    console.log("sdfds");
     const handleMouseMove = (e: MouseEvent) => {
       setCursorPos({ x: e.clientX, y: e.clientY });
-      console.log("sdfds", e.clientX, e.clientY);
     };
     if (sectionRef.current) {
       window.addEventListener("mousemove", handleMouseMove);
@@ -49,19 +47,16 @@ const MyWorks = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // IntersectionObserver logic
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Update visibility every time intersection changes
           setShow(entry.isIntersecting);
-          console.log(entry.isIntersecting, "dfsdsf");
         });
       },
       {
-        root: null, // viewport
-        threshold: 0.3, // lower = more sensitive
+        root: null,
+        threshold: 0.3,
       }
     );
 
