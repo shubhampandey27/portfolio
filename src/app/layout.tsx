@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   },
   description: "Shubham Pandey's Product Design Portfolio",
   keywords: [
+    "shubhfolio.com",
+    "shubhfolio",
     "shubham",
     "pandey",
     "Shubham Pandey Portfolio",
