@@ -62,7 +62,7 @@ const Hero = () => {
               alt="hero-img"
               height={1000}
               width={1000}
-              className="w-[392px] h-[416px]"
+              className="object-contain w-[392px] h-[416px]"
             />
           </div>
         </div>
