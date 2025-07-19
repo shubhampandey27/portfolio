@@ -82,7 +82,7 @@ const GetInTouch = () => {
 
             <div className="flex items-center gap-[13px] mt-[20px] mb-[29px]">
               <LinkedInIcon href={"https://www.linkedin.com/in/shubhfolio/"} />
-              <PeerListIcon href={"https://peerlist.io/shubhfolio"} />
+              <PeerListIcon href={"https://www.behance.net/shubhfolio"} />
               <FigmaIcon href={"https://www.figma.com/@shubhampandey"} />
               <MailIcon href={"mailto:shubhfolio@gmail.com"} />
             </div>
@@ -117,11 +117,11 @@ const GetInTouch = () => {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                       />
-                      {formik.touched.name && formik.errors.name && (
+                      {/* {formik.touched.name && formik.errors.name && (
                         <p className="text-red-600 text-xs mt-1 font-normal">
                           {formik.errors.name}
                         </p>
-                      )}
+                      )} */}
                     </div>
 
                     <div className="w-full">
@@ -140,11 +140,11 @@ const GetInTouch = () => {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                       />
-                      {formik.touched.email && formik.errors.email && (
+                      {/* {formik.touched.email && formik.errors.email && (
                         <p className="text-red-600 text-xs mt-1 font-normal">
                           {formik.errors.email}
                         </p>
-                      )}
+                      )} */}
                     </div>
                   </div>
 
@@ -163,11 +163,11 @@ const GetInTouch = () => {
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                     />
-                    {formik.touched.message && formik.errors.message && (
+                    {/* {formik.touched.message && formik.errors.message && (
                       <p className="text-red-600 text-xs mt-1 font-normal">
                         {formik.errors.message}
                       </p>
-                    )}
+                    )} */}
                   </div>
 
                   <button

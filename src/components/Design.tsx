@@ -38,14 +38,13 @@ const Design = () => {
       <div className="box">
         <div className="mb-10 box">
           <p className="text-center text-[36px] font-medium">
-            My approach to design
+            My design specialties
           </p>
           <p className="text-center text-base font-normal leading-[28px]">
-            There are key design philosophies that I hold dear, guiding my
-            approach to every project. I believe in the power of working
+            Check out my design specialties below, and feel free to get in
           </p>
           <p className="text-center text-base font-normal leading-[28px]">
-            both smart and hard to achieve excellence.
+            touch if you're interested in collaborating.
           </p>
         </div>
 

@@ -115,14 +115,8 @@ const MyWorks = () => {
       {show && (
         <motion.div
           animate={{
-            x: cursorPos.x + 20,
-            y: cursorPos.y + 20,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-            mass: 0.5,
+            x: cursorPos.x,
+            y: cursorPos.y,
           }}
           className="fixed top-0 left-0 z-[9999] pointer-events-none"
         >
@@ -134,7 +128,7 @@ const MyWorks = () => {
                   initial={{ opacity: 0, scale: 0.7 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.7 }}
-                  transition={{ duration: 0.2 }}
+                  // transition={{ duration: 0.2 }}
                   className="bg-white px-4 py-2 rounded-[10px] text-sm font-medium"
                 >
                   View Project
@@ -145,8 +139,8 @@ const MyWorks = () => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 0.5, scale: 0.9 }}
                   exit={{ opacity: 0, scale: 0.5 }}
-                  transition={{ duration: 0.2 }}
-                  className="w-3 h-3 bg-SecondaryText rounded-full"
+                  // transition={{ duration: 0.2 }}
+                  className="w-4 h-4 bg-SecondaryText rounded-full"
                 />
               )}
             </AnimatePresence>

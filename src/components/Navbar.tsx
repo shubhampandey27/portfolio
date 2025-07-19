@@ -41,12 +41,12 @@ const Navbar = () => {
   return (
     <nav className="p-4  z-50 sticky top-0 left-0 right-0 bg-white">
       <div className="box ">
-        <div className="px-0 md:px-4 flex items-center justify-between">
+        <div className="px-0 flex items-center justify-between">
           <div className="flex items-center gap-[25px] justify-between w-full lg:justify-start lg:w-auto">
             {/* icons */}
             {pathname !== "/" ? (
               <div
-                className="text-sm font-medium cursor-pointer flex items-center gap-3"
+                className="text-sm text-PrimaryText font-medium cursor-pointer flex items-center gap-3"
                 onClick={() => {
                   router.push("/");
                 }}
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <LinkedInIcon
                   href={" https://www.linkedin.com/in/shubhfolio/"}
                 />
-                <PeerListIcon href={"https://peerlist.io/shubhfolio"} />
+                <PeerListIcon href={"https://www.behance.net/shubhfolio"} />
                 <FigmaIcon href={"https://www.figma.com/@shubhampandey"} />
                 <MailIcon href={"shubhfolio@gmail.com"} />
               </div>
@@ -152,12 +152,14 @@ const Navbar = () => {
           </div>
 
           {/* Resume button */}
-          <button
-            type="button"
+          <a
+            href="https://drive.google.com/file/d/1hK_gvXK-u9Ql4bzib3zBdKuoEkJG3uoU/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="transition-all hover:opacity-[0.8] duration-300 ease-in cursor-pointer hidden lg:flex items-center gap-2 bg-primaryColor h-[36px] px-[15px] text-white text-sm font-medium rounded-lg"
           >
             <span className="pb-[1px]"> View my resume</span> <DownloadIcon />
-          </button>
+          </a>
         </div>
       </div>
     </nav>

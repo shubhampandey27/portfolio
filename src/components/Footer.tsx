@@ -14,7 +14,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-[13px] mt-[20px] mb-[29px]">
             <LinkedInIcon href={" https://www.linkedin.com/in/shubhfolio/"} />
-            <PeerListIcon href={"https://peerlist.io/shubhfolio"} />
+            <PeerListIcon href={"https://www.behance.net/shubhfolio"} />
             <FigmaIcon href={"https://www.figma.com/@shubhampandey"} />
             <MailIcon href={"shubhfolio@gmail.com"} />
           </div>

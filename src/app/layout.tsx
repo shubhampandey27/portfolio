@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { LenisProvider } from "@/context/scroll-provider";
+// import { LenisProvider } from "@/context/scroll-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -109,7 +109,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
-      {/* <link rel="icon" href={header.favicon} type="image/png" /> */}
+
       <body className={inter.variable}>
         {/* <LenisProvider> */}
         <Navbar />

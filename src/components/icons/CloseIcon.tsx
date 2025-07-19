@@ -4,8 +4,8 @@ const CloseIcon = ({ size }: { size: number }) => {
   return (
     <div>
       <svg
+        className="hover:fill-SecondaryText fill-PrimaryText transition-all ease-in duration-300 cursor-pointer"
         xmlns="http://www.w3.org/2000/svg"
-        color="#000"
         display="inline-block"
         height={size}
         width={size}

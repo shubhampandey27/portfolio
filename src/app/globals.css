@@ -23,7 +23,7 @@
     @apply px-4 w-full mx-0 lg:px-0 md:mx-auto md:w-[700px] lg:w-[60rem] xl:w-[860px];
   }
   .inputStyle {
-    @apply p-4 bg-[#F5F5F5] border  rounded-[10px] placeholder:text-SecondaryText text-sm font-medium outline-none w-full;
+    @apply p-4 bg-[#F5F5F5] border  rounded-[10px] placeholder:text-SecondaryText placeholder:font-normal text-sm font-medium outline-none w-full;
   }
   /* .cursor-pointer {
   } */
