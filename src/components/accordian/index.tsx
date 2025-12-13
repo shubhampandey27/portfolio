@@ -9,6 +9,7 @@ interface AccordionProps {
   setExpanded: (index: number | false) => void;
   title: string;
   description: string;
+  svg: any;
 }
 
 const Accordion: React.FC<AccordionProps> = ({
@@ -17,13 +18,14 @@ const Accordion: React.FC<AccordionProps> = ({
   setExpanded,
   title,
   description,
+  svg,
 }) => {
   const isOpen = i === expanded;
 
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 60;
+      const offset = 30;
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -47,7 +49,14 @@ const Accordion: React.FC<AccordionProps> = ({
         } `}
       >
         <div className="flex justify-between items-center  md:gap-8 text-sm md:text-sm lg:text-base font-medium">
-          <div className="md:text-lg font-medium pointer-events-none text-start">
+          <div className="flex items-center gap-4 justify-center md:text-lg font-medium pointer-events-none text-start">
+            <p
+              className={`h-[15px] w-[15px] ${
+                isOpen ? "stroke-white" : "stroke-primaryColor"
+              }`}
+            >
+              {svg}
+            </p>{" "}
             {title}
           </div>
         </div>

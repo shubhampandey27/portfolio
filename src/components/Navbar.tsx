@@ -28,7 +28,7 @@ const Navbar = () => {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 60;
+      const offset = 30;
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="p-4  z-50 sticky top-0 left-0 right-0 bg-white">
+    <nav className="p-4  z-50 static lg:sticky top-0 left-0 right-0 bg-white opacity-[0.95]">
       <div className="box ">
         <div className="px-0 flex items-center justify-between">
           <div className="flex items-center gap-[25px] justify-between w-full lg:justify-start lg:w-auto">
@@ -153,7 +153,7 @@ const Navbar = () => {
 
           {/* Resume button */}
           <a
-            href="https://drive.google.com/file/d/1hK_gvXK-u9Ql4bzib3zBdKuoEkJG3uoU/view?usp=sharing"
+            href="https://drive.google.com/drive/folders/1O8hOWsiRKx7Z4DyuV_ACKxI3X7XqmEUF?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-all hover:opacity-[0.8] duration-300 ease-in cursor-pointer hidden lg:flex items-center gap-2 bg-primaryColor h-[36px] px-[15px] text-white text-sm font-medium rounded-lg"

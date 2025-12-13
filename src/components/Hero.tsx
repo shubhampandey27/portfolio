@@ -16,7 +16,7 @@ const Hero = () => {
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 60;
+      const offset = 30;
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -25,6 +25,23 @@ const Hero = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (showModal) {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    };
+  }, [showModal]);
 
   return (
     <section id="About" className="relative border-b border-borderColor">
@@ -124,16 +141,35 @@ const Hero = () => {
                       <MailIcon href={"shubhfolio@gmail.com"} />
                     </div>
                     <div>
-                      <p className="text-xs flex items-start gap-2 cursor-pointer">
-                        shubhfolio@gmail.com
-                      </p>
+                      <a
+                        href="mailto:shubhfolio@gmail.com"
+                        className="text-xs flex items-start gap-2 cursor-pointer"
+                      >
+                        <span className="h-[15px] w-[15px] flex items-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000"
+                            display="inline-block"
+                            style={{
+                              userSelect: "none",
+                              width: "100%",
+                              height: "100%",
+                              flexShrink: "0",
+                            }}
+                            viewBox="0 0 256 256"
+                          >
+                            <path d="M224 48H32a8 8 0 0 0-8 8v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a8 8 0 0 0-8-8m-96 85.15L52.57 64h150.86ZM98.71 128 40 181.81V74.19Zm11.84 10.85 12 11.05a8 8 0 0 0 10.82 0l12-11.05 58 53.15H52.57ZM157.29 128 216 74.18v107.64Z"></path>
+                          </svg>
+                        </span>{" "}
+                        <p className="leading-[15px]">shubhfolio@gmail.com</p>
+                      </a>
                     </div>
                   </div>
                 </div>
                 {/*  */}
                 <div className="flex items-start gap-[20px] flex-col">
                   <p className="text-[20px] md:text-[25px] font-medium">
-                    About Shubham
+                    About Shubham Pandey
                   </p>
                   <div className="flex items-start gap-[20px] flex-col max-h-[350px] overflow-auto leading-[32px]">
                     <p className="text-[15px]">

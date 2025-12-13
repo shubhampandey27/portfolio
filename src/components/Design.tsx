@@ -12,21 +12,80 @@ const Design = () => {
       title: "Web design",
       sub: "Modern and responsive web interfaces tailored for users needs.",
       img: "https://framerusercontent.com/images/kxGKehTG3XUXhQ0CoKC1BmO04.png",
+      svg: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+          <path d="M3 9h18M9 21V9"></path>
+        </svg>
+      ),
     },
     {
       title: "App Design",
       sub: "Creating seamless and user-friendly mobile experiences.",
       img: "https://framerusercontent.com/images/r82aqmCKLGCrYsgf7mBxugRE.png",
+      svg: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+          <path d="M12 18h.01"></path>
+        </svg>
+      ),
     },
     {
       title: "Design Systems",
       sub: "Building scalable design systems for consistency and speed.",
       img: "https://framerusercontent.com/images/hUw80NrYyOfmVEj6LRtq92PMFqE.png",
+      svg: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+        </svg>
+      ),
     },
     {
       title: "Prototyping",
       sub: "Rapid, interactive prototypes for effective and efficient validation.",
       img: "https://framerusercontent.com/images/zH0WaptSjWcVQz0nfZt5B7I0Edk.png",
+      svg: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5M12 2h3.5a3.5 3.5 0 1 1 0 7H12z"></path>
+          <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5"></path>
+        </svg>
+      ),
     },
   ];
 
@@ -58,6 +117,7 @@ const Design = () => {
                 setExpanded={setExpanded}
                 title={item.title}
                 description={item.sub}
+                svg={item.svg}
               />
             ))}
           </div>
