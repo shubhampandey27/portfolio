@@ -96,19 +96,23 @@ const Design = () => {
     >
       <div className="box">
         <div className="mb-10 box">
-          <p className="text-center text-[36px] font-medium">
+          <p className="text-center text-[30px] lg:text-[36px] font-medium">
             My design specialties
           </p>
-          <p className="text-center text-base font-normal leading-[28px]">
-            Check out my design specialties below, and feel free to get in
-          </p>
-          <p className="text-center text-base font-normal leading-[28px]">
+          <div className="flex items-center justify-center">
+            {" "}
+            <p className="text-center text-base font-normal leading-[28px] w-full lg:max-w-[450px]">
+              Check out my design specialties below, and feel free to get in
+              touch if you're interested in collaborating.
+            </p>
+          </div>
+          {/* <p className="text-center text-base font-normal leading-[28px]">
             touch if you're interested in collaborating.
-          </p>
+          </p> */}
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
-          <div className="w-full lg:w-[45%]">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-4">
+          <div className="w-full lg:w-[364px]">
             {data.map((item, i) => (
               <Accordion
                 key={i}
@@ -121,7 +125,7 @@ const Design = () => {
               />
             ))}
           </div>
-          <div className="w-full lg:w-[55%]">
+          <div className="w-full lg:w-[600px] shadow-[0px_10px_32px_0px_rgba(0,0,0,0.08)]">
             {data.map((item, i) => (
               <motion.img
                 key={i}
@@ -133,9 +137,9 @@ const Design = () => {
                   y: expanded === i ? 0 : 40,
                 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className={`object-contain ${
+                className={`object-top object-cover ${
                   expanded === i ? "block" : "hidden"
-                } w-full h-[374px] rounded-[10px]`}
+                } w-full h-[210px] lg:h-[374px] rounded-[10px]`}
               />
             ))}
           </div>

@@ -66,7 +66,7 @@ const GetInTouch = () => {
       <div className="box">
         <div className="flex flex-col md:flex-row items-center gap-[39px] relative">
           <Image
-            src={"/images/contact-img.png"}
+            src={"/images/newone.png"}
             alt="hero-img"
             height={1000}
             width={1000}
@@ -75,7 +75,9 @@ const GetInTouch = () => {
 
           {/* Form Area */}
           <div className="w-full relative min-h-[300px]">
-            <p className="text-[36px] font-medium">Get in touch!</p>
+            <p className="text-[30px] lg:text-[36px] font-medium">
+              Get in touch!
+            </p>
             <p className="text-[15px] md:text-base font-normal leading-[28px]">
               Let’s connect to discuss about design!
             </p>

@@ -38,7 +38,7 @@ const Accordion: React.FC<AccordionProps> = ({
   return (
     <div
       onClick={() => setExpanded(i)}
-      className={`w-full p-4 rounded-xl border-borderColor border my-2 cursor-pointer ${
+      className={`w-full p-4 rounded-xl border-borderColor border mb-2 cursor-pointer ${
         isOpen ? "bg-primaryColor" : "bg-[#F5F5F5] "
       } `}
     >
@@ -52,7 +52,7 @@ const Accordion: React.FC<AccordionProps> = ({
           <div className="flex items-center gap-4 justify-center md:text-lg font-medium pointer-events-none text-start">
             <p
               className={`h-[15px] w-[15px] ${
-                isOpen ? "stroke-white" : "stroke-primaryColor"
+                isOpen ? "stroke-white" : "stroke-PrimaryText"
               }`}
             >
               {svg}

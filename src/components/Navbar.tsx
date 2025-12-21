@@ -112,6 +112,7 @@ const Navbar = () => {
                     animate={{
                       opacity: 1,
                       y: 0,
+                      z: 99999,
                       rotate: [20, -7],
                       transition: {
                         duration: 0.3,
@@ -131,7 +132,7 @@ const Navbar = () => {
                         ease: "easeIn",
                       },
                     }}
-                    className="absolute top-[25px] right-0 border rounded-lg border-borderColor p-4 flex flex-col gap-4 bg-white shadow-xl z-40"
+                    className="absolute top-[25px] right-0 border rounded-lg border-borderColor p-4 flex flex-col gap-4 bg-white shadow-xl z-[99999px]"
                   >
                     {data.map((item, index) => (
                       <p
@@ -140,7 +141,7 @@ const Navbar = () => {
                           setMenu(false);
                           handleScroll(item.title);
                         }}
-                        className="text-SecondaryText font-medium text-sm hover:text-black transition-colors"
+                        className="text-SecondaryText font-medium text-sm hover:text-black transition-colors z-50"
                       >
                         {item.title}
                       </p>
@@ -153,7 +154,7 @@ const Navbar = () => {
 
           {/* Resume button */}
           <a
-            href="https://drive.google.com/drive/folders/1O8hOWsiRKx7Z4DyuV_ACKxI3X7XqmEUF?usp=sharing"
+            href="https://drive.google.com/drive/folders/1EntgzKbUSmVmk-EYyaOnl4K-w2PfnYPL"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-all hover:opacity-[0.8] duration-300 ease-in cursor-pointer hidden lg:flex items-center gap-2 bg-primaryColor h-[36px] px-[15px] text-white text-sm font-medium rounded-lg"

@@ -47,7 +47,7 @@ const Hero = () => {
     <section id="About" className="relative border-b border-borderColor">
       <div className="box">
         <div className="py-[40px] flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between w-full ">
-          <div className="max-w-[480px] flex flex-col gap-[10px]">
+          <div className="max-w-[480px] flex flex-col gap-[10px] -z-10">
             <p className="text-PrimaryText font-medium text-sm">
               Hello there! 👋
             </p>
@@ -123,9 +123,9 @@ const Hero = () => {
               <div className="flex items-start flex-col md:flex-row gap-[24px] w-full">
                 <div className="flex items-start flex-row md:flex-col gap-[20px]">
                   <img
-                    src="/images/modal-img.png"
+                    src="/images/newone.png"
                     alt="..."
-                    className="max-h-[1024px] max-w-[1024px] object-cover rounded-[10px] size-[130px] lg:size-[172px]"
+                    className="max-h-[1024px] grayscale  max-w-[1024px] object-cover rounded-[10px] size-[130px] lg:size-[172px]"
                   />
                   <div className="flex items-start flex-col gap-[20px]">
                     <div className="flex items-center gap-[13px] ">

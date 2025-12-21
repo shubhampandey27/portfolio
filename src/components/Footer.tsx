@@ -8,11 +8,11 @@ const Footer = () => {
   return (
     <footer>
       <div className="box">
-        <div className="flex items-center flex-col lg:flex-row justify-between">
+        <div className="flex items-center flex-col lg:flex-row justify-between mb-[50px]">
           <p className="text-sm font-normal leading-[28px]">
             Designed and built by Shubham Pandey
           </p>
-          <div className="flex items-center gap-[13px] mt-[20px] mb-[29px]">
+          <div className="flex items-center gap-[13px] ">
             <LinkedInIcon href={" https://www.linkedin.com/in/shubhfolio/"} />
             <PeerListIcon href={"https://www.behance.net/shubhfolio"} />
             <FigmaIcon href={"https://www.figma.com/@shubhampandey"} />

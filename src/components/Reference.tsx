@@ -94,24 +94,53 @@ const Reference = () => {
     },
     {
       title: "Aditya Bokade",
-      currentTitle: "Customer Experience Head @MentorMind",
-      message: `I had the pleasure of working with Shubham at Cendrol, where he stood out as a talented and reliable UI/UX designer. His ability to turn user needs into clean, intuitive designs made a real impact on our product. Any team would be lucky to have him, and I’m confident he’ll be a valuable asset wherever he goes.`,
+      currentTitle: "Product @Marriott International",
+      message: (
+        <div className="flex flex-col gap-5">
+          <p>
+            I had the pleasure of working with Shubham at Cendrol, where he
+            consistently stood out as a talented and reliable product designer.
+            He had a strong ability to understand user needs and translate them
+            into clean, intuitive, and practical design solutions that directly
+            improved the product experience.
+          </p>
+          <p>
+            Shubham was thoughtful in his approach, detail-oriented, and always
+            open to feedback, which made collaboration smooth and effective.
+          </p>
+          <p>
+            Beyond execution, he showed a good understanding of business goals
+            and balanced them well with user expectations. His designs were not
+            just visually appealing but also functional and purposeful. Any team
+            would be lucky to have him, and I’m confident he’ll continue to be a
+            valuable asset wherever he goes.
+          </p>
+        </div>
+      ),
       image: "/one.png",
     },
     {
       title: "Dhruv Kamath",
-      currentTitle: "Associate Product Manager @Durupert",
+      currentTitle: "Product Manager @Duruper",
       message: (
         <div className="flex flex-col gap-5">
           <p>
-            I worked with Shubham during my time at Cendrol. His design insights
-            and focus on user experience consistently elevated our product. His
-            thoughtful approach helped us achieve great results and made him an
-            invaluable part of the team.
+            I worked with Shubham during my time at Cendrol, and his design
+            insights and strong focus on user experience consistently elevated
+            our product. He approached problems thoughtfully, balancing user
+            needs with business requirements to deliver clear and effective
+            design solutions.
           </p>
           <p>
-            I’d gladly recommend him to any team looking for someone dependable
-            and driven.
+            Shubham was dependable in execution and proactive in discussions,
+            often contributing ideas that improved overall outcomes. His ability
+            to collaborate closely with product and engineering teams made the
+            design process smooth and efficient.
+          </p>
+          <p>
+            He took ownership of his work and delivered with consistency and
+            care. I’d gladly recommend him to any team looking for someone
+            reliable, driven, and invested in meaningful user experiences.
           </p>
         </div>
       ),
@@ -131,6 +160,8 @@ const Reference = () => {
     autoplaySpeed: 6000,
     pauseOnHover: false,
     arrows: false,
+    swipe: isMobile ? true : false, // disables touch swipe
+    draggable: isMobile ? true : false,
   };
   return (
     <section
@@ -139,7 +170,7 @@ const Reference = () => {
     >
       <div className="box1">
         <div className="mb-10 text-center">
-          <p className="text-[36px] font-medium">References</p>
+          <p className="text-[30px] lg:text-[36px] font-medium">References</p>
         </div>
         {/*  */}
         <div className="relative ">
@@ -203,7 +234,7 @@ const Reference = () => {
               return (
                 <div
                   key={index}
-                  className="p-4 border border-borderColor rounded-[10px] bg-white"
+                  className="p-[30px] border border-borderColor rounded-[10px] bg-white"
                 >
                   <div className="flex gap-4 items-start">
                     <div>
@@ -222,7 +253,7 @@ const Reference = () => {
                       </p>
                     </div>
                   </div>
-                  <p className="text-justify text-[15px] lg:text-base font-normal mt-4 leading-[30px]">
+                  <p className="text-justify text-[15px] lg:text-base font-normal mt-[30px] leading-[27px]">
                     {item.message}
                   </p>
                 </div>

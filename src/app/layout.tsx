@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 // import { LenisProvider } from "@/context/scroll-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -17,6 +10,9 @@ export const metadata: Metadata = {
     template: "%s | Shubham Pandey Portfolio",
   },
   description: "Shubham Pandey's Product Design Portfolio",
+  icons: {
+    icon: "/favicon.png",
+  },
   keywords: [
     "shubhfolio.com",
     "shubhfolio",
@@ -106,11 +102,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-      </head>
-
-      <body className={inter.variable}>
+      <body>
         {/* <LenisProvider> */}
         <Navbar />
         {children}

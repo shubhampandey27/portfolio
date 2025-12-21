@@ -1,10 +1,112 @@
 @import "tailwindcss";
 
+/* General Sans Font Face Declarations */
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Regular.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Regular.woff") format("woff"),
+    url("/fonts/GeneralSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Italic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Italic.woff") format("woff"),
+    url("/fonts/GeneralSans-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Light.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Light.woff") format("woff"),
+    url("/fonts/GeneralSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-LightItalic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-LightItalic.woff") format("woff"),
+    url("/fonts/GeneralSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Medium.woff") format("woff"),
+    url("/fonts/GeneralSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-MediumItalic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-MediumItalic.woff") format("woff"),
+    url("/fonts/GeneralSans-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Semibold.woff") format("woff"),
+    url("/fonts/GeneralSans-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-SemiboldItalic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-SemiboldItalic.woff") format("woff"),
+    url("/fonts/GeneralSans-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-Bold.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Bold.woff") format("woff"),
+    url("/fonts/GeneralSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/GeneralSans-BoldItalic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-BoldItalic.woff") format("woff"),
+    url("/fonts/GeneralSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --background: #4b536aff;
   --mainText: #111111;
   --subText: #11111180;
   --borderColor: #eeeeee;
+  --font-general-sans: "General Sans", sans-serif;
 }
 
 @theme inline {
@@ -12,7 +114,7 @@
   --color-PrimaryText: var(--mainText);
   --color-SecondaryText: var(--subText);
   --color-borderColor: var(--borderColor);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-general-sans);
 }
 
 @layer utilities {
@@ -61,4 +163,8 @@
   color: black !important;
   font-size: 24px;
 } */
+}
+
+.slick-slider {
+  user-select: auto !important;
 }
