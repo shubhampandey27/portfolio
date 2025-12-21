@@ -47,11 +47,11 @@ const Hero = () => {
     <section id="About" className="relative border-b border-borderColor">
       <div className="box">
         <div className="py-[40px] flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between w-full ">
-          <div className="max-w-[480px] flex flex-col gap-[10px] -z-10">
+          <div className="max-w-[480px] flex flex-col gap-[10px] ">
             <p className="text-PrimaryText font-medium text-sm">
               Hello there! 👋
             </p>
-            <p className="text-SecondaryText font-medium text-[32px] lg:text-[29px]">
+            <p className="text-SecondaryText font-medium text-[32px] lg:text-[29px] -z-10">
               This is <span className="text-PrimaryText">Shubham</span>, a
               passionate{" "}
               <span className="text-PrimaryText">Product Designer</span>
@@ -65,7 +65,10 @@ const Hero = () => {
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                onClick={() => setShowModal(true)}
+                onClick={() => {
+                  setShowModal(true);
+                  console.log("sdfsd");
+                }}
                 className="transition-all hover:opacity-[0.8] duration-300 ease-in cursor-pointer flex items-center gap-2 bg-primaryColor h-[42px] px-[20px] text-white text-sm font-medium rounded-lg"
               >
                 <span className="pb-[3px]"> About me</span> <ArrowIon />
