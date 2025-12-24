@@ -47,22 +47,22 @@ const Hero = () => {
     <section id="About" className="relative border-b border-borderColor">
       <div className="box">
         <div className="py-[40px] flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between w-full ">
-          <div className="max-w-[480px] flex flex-col gap-[10px] ">
-            <p className="text-PrimaryText font-medium text-sm">
+          <div className="max-w-[480px] flex flex-col  ">
+            <p className="text-PrimaryText font-medium text-sm mt-[10px]">
               Hello there! 👋
             </p>
-            <p className="text-SecondaryText font-medium text-[32px] lg:text-[29px] -z-10">
+            <p className="text-SecondaryText font-medium text-[32px]  -z-10  mt-[10px]">
               This is <span className="text-PrimaryText">Shubham</span>, a
               passionate{" "}
               <span className="text-PrimaryText">Product Designer</span>
             </p>
-            <p className="font-normal text-[15px] lg:text-base leading-[32px] ">
+            <p className="font-normal text-[15px] lg:text-base leading-[32px]  mt-[10px] ">
               I’m a passionate product designer with over 3 years of experience
               crafting clean, user-friendly designs across platforms. I focus on
               delivering high-quality solutions that meet unique user and
               business needs.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-[10px] lg:mt-[30px]">
               <button
                 type="button"
                 onClick={() => {
@@ -86,11 +86,11 @@ const Hero = () => {
 
           <div className="flex md:items-center items-start justify-center">
             <Image
-              src={"/images/shub-img.png"}
+              src={"/images/img-shub.png"}
               alt="hero-img"
               height={1000}
               width={1000}
-              className="object-contain w-[400px] h-[400px]"
+              className="object-contain bg-center w-[400px] h-[400px]"
             />
           </div>
         </div>
@@ -104,7 +104,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center "
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}
+            style={{ backgroundColor: "rgba(255, 255, 255, 0.97)" }}
             onClick={() => setShowModal(false)}
           >
             <motion.div
@@ -128,7 +128,7 @@ const Hero = () => {
                   <img
                     src="/images/newone.png"
                     alt="..."
-                    className="max-h-[1024px] grayscale  max-w-[1024px] object-cover rounded-[10px] size-[130px] lg:size-[172px]"
+                    className="max-h-[1024px] max-w-[1024px] object-cover rounded-[10px] size-[130px] lg:size-[172px]"
                   />
                   <div className="flex items-start flex-col gap-[20px]">
                     <div className="flex items-center gap-[13px] ">

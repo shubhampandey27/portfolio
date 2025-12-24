@@ -92,11 +92,11 @@ const Design = () => {
   return (
     <section
       id="Specialties"
-      className="border-b border-borderColor py-[100px] overflow-hidden bg-[#FCFCFC]"
+      className="border-b border-borderColor py-[60px] lg:py-[100px] overflow-hidden bg-[#FCFCFC]"
     >
       <div className="box">
         <div className="mb-10 box">
-          <p className="text-center text-[30px] lg:text-[36px] font-medium">
+          <p className="text-center text-[30px] lg:text-[40px] font-medium">
             My design specialties
           </p>
           <div className="flex items-center justify-center">

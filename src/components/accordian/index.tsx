@@ -48,7 +48,7 @@ const Accordion: React.FC<AccordionProps> = ({
           isOpen ? "text-white" : "text-PrimaryText"
         } `}
       >
-        <div className="flex justify-between items-center  md:gap-8 text-sm md:text-sm lg:text-base font-medium">
+        <div className="flex justify-between items-center  md:gap-8 text-[18px] md:text-sm lg:text-base font-medium">
           <div className="flex items-center gap-4 justify-center md:text-lg font-medium pointer-events-none text-start">
             <p
               className={`h-[15px] w-[15px] ${

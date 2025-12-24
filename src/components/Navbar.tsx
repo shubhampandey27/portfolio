@@ -110,7 +110,7 @@ const Navbar = () => {
                       transformOrigin: "top right",
                     }}
                     animate={{
-                      opacity: 1,
+                      opacity: 1000,
                       y: 0,
                       z: 99999,
                       rotate: [20, -7],
@@ -132,7 +132,7 @@ const Navbar = () => {
                         ease: "easeIn",
                       },
                     }}
-                    className="absolute top-[25px] right-0 border rounded-lg border-borderColor p-4 flex flex-col gap-4 bg-white shadow-xl z-[99999px]"
+                    className="absolute top-[25px] right-0 border rounded-lg border-borderColor p-4 flex flex-col gap-4 bg-white shadow-xl z-[99999]"
                   >
                     {data.map((item, index) => (
                       <p

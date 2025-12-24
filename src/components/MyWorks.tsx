@@ -20,17 +20,17 @@ const MyWorks = () => {
         "Improving transparency & scaling operations efficiently. Automated the process of premium vehicle allocation and boost driver partners' earnings.",
       image: "/images/work-3.png",
       route: "",
-      date: "15 July 2025",
+      date: "01 Dec 2025",
       tag: "App Design - B2C",
       href: "https://medium.com/@shubhfolio/structuring-the-premium-upgrade-path-for-grels-driver-partners-product-design-case-study-060769f08d19",
     },
     {
       title: "EDGE: Making daily commutes at your fingertips — A UX case study",
       description:
-        "Improving transparency & scaling operations efficiently. Automated the process of premium vehicle allocation and boost driver partners' earnings.",
+        "Designed to find faster routes with live updates and quick rebooking.",
       image: "/images/work-4.png",
       route: "",
-      date: "05 Nov 2025",
+      date: "05 Dec 2025",
       tag: "Personal Project",
       href: "https://medium.com/@shubhfolio/edge-making-daily-commutes-at-your-fingertips-a-ux-case-study-2cfa541efc95",
     },
@@ -40,7 +40,7 @@ const MyWorks = () => {
         "Curated for Gen-Zs to stash favorites and earn through affiliate links.",
       image: "/images/casetwo.png",
       route: "",
-      date: "03 Dec 2025",
+      date: "15 Dec 2025",
       tag: "Personal Project",
       href: "https://medium.com/@shubhfolio/affiliate-marketing-app-for-gen-zs-09216ab94496",
     },
@@ -84,11 +84,11 @@ const MyWorks = () => {
       onMouseEnter={() => setIsInside(true)}
       onMouseLeave={() => setIsInside(false)}
       onMouseMove={(e) => setCursorPos({ x: e.clientX, y: e.clientY })}
-      className="border-b border-borderColor py-[100px] relative cursor-none"
+      className="border-b border-borderColor py-[60px] lg:py-[100px] relative cursor-none"
     >
       <div className="box">
         <div className="mb-10 text-center">
-          <p className="text-[30px] lg:text-[36px] font-medium">My work</p>
+          <p className="text-[30px] lg:text-[40px] font-medium">My work</p>
           <div className="flex items-center justify-center">
             <p className="text-[15px] md:text-base font-normal leading-[28px] w-full lg:max-w-[450px]">
               A showcase of my design projects, highlighting creative solutions
@@ -113,19 +113,19 @@ const MyWorks = () => {
               key={index}
               onMouseEnter={() => setIsHoveringItem(true)}
               onMouseLeave={() => setIsHoveringItem(false)}
-              className="relative group rounded-[10px] h-[340px] bg-contain bg-center bg-no-repeat overflow-hidden text-white"
+              className="relative group rounded-[10px] h-[256px] lg:h-[340px] bg-contain bg-center bg-no-repeat overflow-hidden text-white"
               style={{ backgroundImage: `url(${item.image})` }}
             >
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70 group-hover:from-black/20 group-hover:via-black/50 group-hover:to-black/90 transition-all duration-500" />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-[20px] z-10">
-                <p className="text-[22px] font-semibold transition-all duration-500">
+              <div className="absolute inset-0 flex flex-col justify-end p-[20px] lg:p-[28px] z-10">
+                <p className="text-[21px] lg:text-[25px] font-semibold transition-all duration-500">
                   {item.title}
                 </p>
-                <p className="text-[13px] font-normal max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
+                <p className="text-[15px] font-normal max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
                   {item.description}
                 </p>
-                <div className="flex mt-2 gap-6 text-[13px] font-normal max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
+                <div className="flex mt-2 gap-3 text-[13px] font-normal max-h-40 opacity-100 lg:max-h-0 overflow-hidden lg:opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
                   <p className="flex items-center justify-center gap-1">
                     <p className="h-[15px] w-[15px]">
                       <svg
@@ -147,7 +147,7 @@ const MyWorks = () => {
                     <p className="pb-[2px]"> {item.date || ""}</p>
                   </p>
                   <p className="flex items-center justify-center gap-1">
-                    <p className="h-[15px] w-[15px]">
+                    <p className="h-[12px] w-[12px] mb-[2.5px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="#FFF"

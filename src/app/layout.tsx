@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "Shubham Pandey's Product Design Portfolio",
   icons: {
     icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   keywords: [
     "shubhfolio.com",

@@ -16,10 +16,10 @@ const OtherLiveProducts = () => {
     },
   ];
   return (
-    <section className="border-b border-borderColor py-[100px] relative">
+    <section className="border-b border-borderColor py-[60px] lg:py-[100px] relative">
       <div className="box">
         <div className="mb-10 text-center">
-          <p className="text-[30px] lg:text-[36px] font-medium">
+          <p className="text-[30px] lg:text-[40px] font-medium">
             Other live products
           </p>
           <p className="text-[15px] md:text-base font-normal leading-[28px]">
@@ -37,7 +37,7 @@ const OtherLiveProducts = () => {
                 }
               }}
               style={{ backgroundImage: `url(${item.image})` }}
-              className="cursor-pointer object-top relative group rounded-[10px]  h-[256px] bg-cover  bg-center bg-no-repeat overflow-hidden text-white"
+              className="cursor-pointer object-top relative group rounded-[10px]  h-[256px] bg-cover bg-left lg:bg-center bg-no-repeat overflow-hidden text-white"
             >
               <div
                 className="absolute inset-0 bg-gradient-to-b   [mask-image:linear-gradient(rgba(0,0,0,0)_0%,_rgb(0,0,0)_100%)]
@@ -45,7 +45,7 @@ const OtherLiveProducts = () => {
     [mask-repeat:no-repeat] from-[rgba(0,0,0,0.12)] to-[rgba(55,55,55,0.85)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-[20px] z-10">
+              <div className="absolute inset-0 flex flex-col justify-end p-[20px] lg:p-[28px] z-10">
                 <p className="text-[22px] font-semibold transform transition-all duration-500 ">
                   {item.title}
                 </p>

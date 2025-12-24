@@ -166,15 +166,15 @@ const Reference = () => {
   return (
     <section
       id="References"
-      className="py-[100px] bg-[#FCFCFC] border-b border-borderColor"
+      className=" py-[60px] pb-[100px]  lg:py-[100px] bg-[#FCFCFC] border-b border-borderColor"
     >
       <div className="box1">
         <div className="mb-10 text-center">
-          <p className="text-[30px] lg:text-[36px] font-medium">References</p>
+          <p className="text-[30px] lg:text-[40px] font-medium">References</p>
         </div>
         {/*  */}
         <div className="relative ">
-          <div className="hidden lg:flex items-center justify-between w-full">
+          <div className=" flex items-center justify-between w-full">
             <motion.div
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.3 }}
@@ -183,7 +183,7 @@ const Reference = () => {
                   carouselRef.current.slickPrev();
                 }
               }}
-              className="absolute top-[50%] z-20 left-[-50px] border-2 border-PrimaryText bg-PrimaryText flex items-center justify-center h-[32px] w-[32px] rounded-full cursor-pointer"
+              className="absolute top-[50%] z-20 left-[-10px] lg:left-[-41px] border-2 border-PrimaryText bg-PrimaryText flex items-center justify-center h-[32px] w-[32px] rounded-full cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +209,7 @@ const Reference = () => {
                   carouselRef.current.slickNext();
                 }
               }}
-              className="absolute top-[50%] z-20 right-[-50px] border-2 border-PrimaryText bg-PrimaryText flex items-center justify-center h-[32px] w-[32px] rounded-full cursor-pointer"
+              className="absolute top-[50%] z-20 right-[-11px] lg:right-[-50px] border-2 border-PrimaryText bg-PrimaryText flex items-center justify-center h-[32px] w-[32px] rounded-full cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

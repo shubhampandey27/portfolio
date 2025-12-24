@@ -23,20 +23,20 @@ const GetInTouch = () => {
       email: "",
       message: "",
     },
-    validationSchema: Yup.object({
-      name: Yup.string()
-        .trim()
-        .min(3, "Name must be at least 3 characters")
-        .required("Name is required"),
-      email: Yup.string()
-        .trim()
-        .email("Invalid email address")
-        .required("Email is required"),
-      message: Yup.string()
-        .min(3, "Message must be at least 3 characters")
-        .required("Message is required")
-        .trim(),
-    }),
+    // validationSchema: Yup.object({
+    //   name: Yup.string()
+    //     .trim()
+    //     .min(3, "Name must be at least 3 characters")
+    //     .required("Name is required"),
+    //   email: Yup.string()
+    //     .trim()
+    //     .email("Invalid email address")
+    //     .required("Email is required"),
+    //   message: Yup.string()
+    //     .min(3, "Message must be at least 3 characters")
+    //     .required("Message is required")
+    //     .trim(),
+    // }),
     onSubmit: async (values, { resetForm }) => {
       setLoading(true);
       try {
@@ -70,12 +70,12 @@ const GetInTouch = () => {
             alt="hero-img"
             height={1000}
             width={1000}
-            className="w-[400px] h-[535px] md:w-[233px] md:h-[421px] object-cover lg:w-[400px] lg:h-[535px] rounded-[10px]"
+            className="w-[400px] h-[521px] md:w-[233px] md:h-[421px] object-cover lg:w-[400px] lg:h-[535px] rounded-[10px]"
           />
 
           {/* Form Area */}
           <div className="w-full relative min-h-[300px]">
-            <p className="text-[30px] lg:text-[36px] font-medium">
+            <p className="text-[30px] lg:text-[40px] font-medium">
               Get in touch!
             </p>
             <p className="text-[15px] md:text-base font-normal leading-[28px]">
@@ -108,13 +108,7 @@ const GetInTouch = () => {
                         type="text"
                         name="name"
                         placeholder="Name"
-                        className={`inputStyle ${
-                          formik.touched.name && formik.errors.name
-                            ? "border-red-500"
-                            : formik.touched.name && !formik.errors.name
-                            ? "border-green-500"
-                            : "border-[#F5F5F5]"
-                        }`}
+                        className={`inputStyle ${"border-[#F5F5F5]"}`}
                         value={formik.values.name}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -131,13 +125,7 @@ const GetInTouch = () => {
                         type="email"
                         name="email"
                         placeholder="Email"
-                        className={`inputStyle ${
-                          formik.touched.email && formik.errors.email
-                            ? "border-red-500"
-                            : formik.touched.email && !formik.errors.email
-                            ? "border-green-500"
-                            : "border-[#F5F5F5]"
-                        }`}
+                        className={`inputStyle ${"border-[#F5F5F5]"}`}
                         value={formik.values.email}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -154,13 +142,7 @@ const GetInTouch = () => {
                     <textarea
                       name="message"
                       placeholder="Message"
-                      className={`inputStyle min-h-[250px] lg:min-h-[150px] ${
-                        formik.touched.message && formik.errors.message
-                          ? "border-red-500"
-                          : formik.touched.message && !formik.errors.message
-                          ? "border-green-500"
-                          : "border-[#F5F5F5]"
-                      }`}
+                      className={`inputStyle min-h-[250px] lg:min-h-[150px] ${"border-[#F5F5F5]"}`}
                       value={formik.values.message}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
