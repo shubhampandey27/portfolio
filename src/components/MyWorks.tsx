@@ -15,6 +15,27 @@ const MyWorks = () => {
 
   const data = [
     {
+      title:
+        "I Built the Ops Brain of an EV Cab Startup. Here is What Happened",
+      description:
+        "A UX case study on designing a full-stack operations portal for GrEL, a funded EV cab company in Pune, from scratch.",
+      image: "/images/nw1.png",
+      route: "",
+      date: "11 Mar 2026",
+      tag: "Internal Tool",
+      href: "https://medium.com/@shubhfolio/i-built-the-ops-brain-of-an-ev-cab-startup-here-is-what-happened-7781e3b362eb",
+    },
+    {
+      title: "Designing a Creative Review Platform from Scratch",
+      description:
+        "How I built Proofit, a multi-stage proof approval tool for creative teams in India",
+      image: "/images/nw2.png",
+      route: "",
+      date: "19 Mar 2026",
+      tag: "SaaS Application",
+      href: "https://medium.com/@shubhfolio/designing-a-creative-review-platform-from-scratch-431941f5c149",
+    },
+    {
       title: "Structuring the Premium Upgrade Path for GREL’s Driver Partners",
       description:
         "Improving transparency & scaling operations efficiently. Automated the process of premium vehicle allocation and boost driver partners' earnings.",
@@ -66,7 +87,7 @@ const MyWorks = () => {
       {
         root: null,
         threshold: 0.3,
-      }
+      },
     );
 
     const el = sectionRef.current;
